@@ -63,8 +63,7 @@ const userController = (User) => {
         if (response=== null) {
             res.status(401).json('credenciales invalidas');
         }else if(body.password===response.password)
-        {   console.log('JWT::::::::', jwt);
-            const token = jwt.sign({data:response}, 'secret', { expiresIn: '1h' });
+        {   const token = jwt.sign({data:response}, 'secret', { expiresIn: '8h' });
             
             res.status(200).json(
                 {

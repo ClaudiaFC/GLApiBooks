@@ -24,7 +24,7 @@ const routes = (User) => {
     .post(validator.body(bodySchema), postUser);
 
     userRouter
-    .route('users/:userId')
+    .route('/users/:userId')
     .get(getUserById)
     .put(putUser)
     .delete(deleteUser)
